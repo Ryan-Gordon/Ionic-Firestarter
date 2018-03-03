@@ -24,7 +24,7 @@ export class AuthProvider {
     
     return new Promise((resolve, reject) => { 
       this.googlePlus.login({
-        'webClientId': '5351366995-npuh9q89gaoiagoc4jssqck26gorj7hh.apps.googleusercontent.com',
+        'webClientId': environment.clientID,
         'offline': true
       }).then( res => {
               const googleCredential = firebase.auth.GoogleAuthProvider
