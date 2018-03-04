@@ -11,4 +11,30 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
+
+  <!-- Login / Signup UI Segments --> 
+  <ion-segment [(ngModel)]="icons" color="primary" *ngIf="!userProfile">
+    <ion-segment-button value="log-in" selected>
+      <ion-icon name="log-in"> Login</ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="clipboard">
+      <ion-icon name="clipboard">Signup</ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Social Sign In buttons -->
+  <button ion-button round full color="danger" (click)="googleLogin()" *ngIf="!userProfile">
+    <ion-icon name="logo-googleplus"></ion-icon>
+    Login with Google
+  </button>
+  
+
+  <!-- User information shown when a user is logged in -->
+  <ion-item *ngIf="userProfile">
+    <ion-avatar item-left>
+      <img [src]="userProfile.photoURL">
+    </ion-avatar>
+    <h2>{{ userProfile.displayName }}</h2>
+    <h3>{{ userProfile.email }}</h3>
+  </ion-item>
 </ion-content>
