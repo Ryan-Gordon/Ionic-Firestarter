@@ -9,6 +9,10 @@ import { HomePage } from '../pages/home/home';
 import { AuthProvider } from '../providers/auth/auth';
 
 import { GooglePlus } from '@ionic-native/google-plus';
+
+//Facebook 
+import { Facebook } from '@ionic-native/facebook';
+
 import {HttpModule} from '@angular/http';
 
 import { environment } from '../enviroments/enviroment';
@@ -40,6 +44,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     GooglePlus,
+    Facebook,
     HttpModule
   ]
 })

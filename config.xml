@@ -84,5 +84,9 @@
     <plugin name="cordova-plugin-googleplus" spec="^5.2.1">
         <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.5351366995-b3don5condkq7a5rccpl5ho3r4b0halk" />
     </plugin>
+    <plugin name="cordova-plugin-facebook4" spec="git+https://github.com/amritk/cordova-plugin-facebook4.git">
+        <variable name="APP_ID" value="417736078659652" />
+        <variable name="APP_NAME" value="Ionic-Firestarter" />
+    </plugin>
     <engine name="android" spec="~7.0.0" />
 </widget>
