@@ -27,6 +27,12 @@
     <ion-icon name="logo-googleplus"></ion-icon>
     Login with Google
   </button>
+
+  <!-- Social Sign In buttons -->
+  <button ion-button round full color="primary" (click)="facebookLogin()" *ngIf="!userProfile">
+    <ion-icon name="logo-facebook"></ion-icon>
+    Login with Facebook
+  </button>
   
 
   <!-- User information shown when a user is logged in -->

@@ -29,6 +29,13 @@ export class HomePage {
           //Do something with the response 
         })
     }
+    facebookLogin(){
+      this.authProvider.facebookLogin()
+        .then(res => {
+          //We have successfully logged in
+          //Do something with the response 
+        })
+    }
 
   
 

@@ -21,6 +21,7 @@
     "@angular/platform-browser": "5.0.3",
     "@angular/platform-browser-dynamic": "5.0.3",
     "@ionic-native/core": "4.4.0",
+    "@ionic-native/facebook": "^4.5.3",
     "@ionic-native/google-plus": "^4.5.3",
     "@ionic-native/splash-screen": "4.4.0",
     "@ionic-native/status-bar": "4.4.0",
@@ -28,6 +29,7 @@
     "angularfire2": "^5.0.0-rc.6",
     "cordova-android": "7.0.0",
     "cordova-plugin-device": "^2.0.1",
+    "cordova-plugin-facebook4": "git+https://github.com/amritk/cordova-plugin-facebook4.git",
     "cordova-plugin-googleplus": "^5.2.1",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^1.1.16",
@@ -54,7 +56,11 @@
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
-      "cordova-plugin-ionic-keyboard": {}
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-facebook4": {
+        "APP_ID": "417736078659652",
+        "APP_NAME": "Ionic-Firestarter"
+      }
     },
     "platforms": [
       "android"
