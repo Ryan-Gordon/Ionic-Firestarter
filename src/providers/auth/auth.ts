@@ -4,6 +4,7 @@ import { GooglePlus } from '@ionic-native/google-plus';
 
 import firebase from 'firebase';
 import { environment } from '../../enviroments/enviroment';
+import { Facebook } from '@ionic-native/facebook';
 export const firebaseConfig = environment.firebaseConfig;
 // Initialise firebase with our config variable
 firebase.initializeApp(firebaseConfig);
@@ -16,8 +17,21 @@ firebase.initializeApp(firebaseConfig);
 @Injectable()
 export class AuthProvider {
 
-  constructor(private googlePlus: GooglePlus) {
+  constructor(private googlePlus: GooglePlus, private facebook:Facebook) {
     console.log('Hello AuthProvider Provider');
+  }
+  facebookLogin(): Promise<any> {
+    return this.facebook.login(['email'])
+      .then( response => {
+        const facebookCredential = firebase.auth.FacebookAuthProvider
+          .credential(response.authResponse.accessToken);
+  
+        firebase.auth().signInWithCredential(facebookCredential)
+          .then( success => { 
+            console.log("Firebase success: " + JSON.stringify(success)); 
+          });
+  
+      }).catch((error) => { console.log(error) });
   }
   
   googleLogin(): Promise<any> {
