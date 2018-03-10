@@ -20,11 +20,13 @@ import { environment } from '../enviroments/enviroment';
 import { AngularFireModule } from 'angularfire2';
 export const firebaseConfig = environment.firebaseConfig;
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { SmsLoginPage } from '../pages/sms-login/sms-login';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    SmsLoginPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    SmsLoginPage
   ],
   providers: [
     StatusBar,
