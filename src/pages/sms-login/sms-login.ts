@@ -7,6 +7,7 @@ import { AuthProvider } from '../../providers/auth/auth';
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
+ * 
  */
 
 @IonicPage()
@@ -21,4 +22,12 @@ export class SmsLoginPage {
               public alertCtrl:AlertController, private auth:AuthProvider) {
   }
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad SmsLoginPage');
+    this.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+  }
+  //Delegate request to auth provider
+  smsLogin(phoneNum: number){
+    this.auth.smsLogin(phoneNum,this.recaptchaVerifier);
+  }
 }

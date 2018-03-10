@@ -3,6 +3,8 @@
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
+
+   * Some of this code is adapted from : https://github.com/javebratt/firebase-phone-authentication
  
 -->
 <ion-header>
@@ -15,7 +17,16 @@
 
 
 <ion-content padding>
-   
+    <div id="recaptcha-container"></div>
+
+    <ion-item>
+      <ion-label stacked>Phone Number</ion-label>
+      <ion-input type="number" [(ngModel)]="phoneNumber"></ion-input>
+    </ion-item>
+  
+    <button ion-button id="sign-in-button" (click)="smsLogin(phoneNumber)">
+      Sign In
+    </button>
   
 
 </ion-content>

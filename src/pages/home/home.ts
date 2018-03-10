@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import firebase from 'firebase';
 import {AuthProvider} from '../../providers/auth/auth';
+import {SmsLoginPage} from '../sms-login/sms-login'
 
 
 @Component({
@@ -35,6 +36,14 @@ export class HomePage {
           //We have successfully logged in
           //Do something with the response 
         })
+    }
+
+    smsLogin(){
+      this.navCtrl.push(SmsLoginPage);
+    }
+
+    signOut(){
+      this.authProvider.signOut();
     }
 
   
