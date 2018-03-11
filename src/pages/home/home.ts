@@ -42,6 +42,10 @@ export class HomePage {
       this.navCtrl.push(SmsLoginPage);
     }
 
+    anonLogin(){
+      this.authProvider.anonLogin();
+    }
+
     signOut(){
       this.authProvider.signOut();
     }

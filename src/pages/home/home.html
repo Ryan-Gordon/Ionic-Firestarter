@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Ionic FireStarter
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -37,9 +37,15 @@
   </button>
 
   <!-- Phone Sign in (Web Only!!)  -->
-  <button ion-button round full color="primary" (click)="smsLogin()" *ngIf="!userProfile">
-      <ion-icon name="logo-facebook"></ion-icon>
+  <button ion-button round full color="secondary" (click)="smsLogin()" *ngIf="!userProfile">
+      <ion-icon name="call"></ion-icon>
       Login with SMS
+    </button>
+
+    <!-- Anon Sign in -->
+  <button ion-button round full color="dark" (click)="anonLogin()" *ngIf="!userProfile">
+      <ion-icon name="person"></ion-icon>
+      Login as a Guest
     </button>
 
   
