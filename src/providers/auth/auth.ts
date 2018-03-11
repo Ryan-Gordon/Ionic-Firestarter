@@ -28,6 +28,13 @@ export class AuthProvider {
   }
 
 
+  anonLogin():Promise<any>{
+
+    return firebase.auth().signInAnonymously()
+        .then(resp => {
+          console.log(resp);
+        })
+  }
   //Adapted from https://github.com/javebratt/firebase-phone-authentication
   smsLogin(phoneNumber: number, recaptchaVerifier:firebase.auth.RecaptchaVerifier){
     const appVerifier = recaptchaVerifier;
