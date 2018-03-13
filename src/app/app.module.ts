@@ -10,12 +10,12 @@ import { AuthProvider } from '../providers/auth/auth';
 
 import { GooglePlus } from '@ionic-native/google-plus';
 
-//Facebook 
+//Facebook
 import { Facebook } from '@ionic-native/facebook';
 
 import {HttpModule} from '@angular/http';
 
-import { environment } from '../enviroments/enviroment';
+import { environment } from '../enviroments/example.enviroment';
 
 import { AngularFireModule } from 'angularfire2';
 export const firebaseConfig = environment.firebaseConfig;
