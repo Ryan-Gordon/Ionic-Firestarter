@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { GooglePlus } from '@ionic-native/google-plus';
 
 import firebase from 'firebase';
-import { environment } from '../../enviroments/enviroment';
+import { environment } from '../../enviroments/example.enviroment';
 import { Facebook } from '@ionic-native/facebook';
 import { AlertController } from 'ionic-angular';
 export const firebaseConfig = environment.firebaseConfig;
