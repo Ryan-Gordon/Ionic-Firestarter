@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 import { AuthProvider } from '../providers/auth/auth';
 
 import { GooglePlus } from '@ionic-native/google-plus';
@@ -20,13 +19,10 @@ import { environment } from '../enviroments/example.enviroment';
 import { AngularFireModule } from 'angularfire2';
 export const firebaseConfig = environment.firebaseConfig;
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { SmsLoginPage } from '../pages/sms-login/sms-login';
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-    SmsLoginPage
+    MyApp
   ],
   imports: [
     BrowserModule,
@@ -37,9 +33,7 @@ import { SmsLoginPage } from '../pages/sms-login/sms-login';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage,
-    SmsLoginPage
+    MyApp
   ],
   providers: [
     StatusBar,

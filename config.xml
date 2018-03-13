@@ -89,5 +89,5 @@
         <variable name="APP_ID" value="417736078659652" />
         <variable name="APP_NAME" value="Ionic-Firestarter" />
     </plugin>
-    <engine name="android" spec="7.0.0" />
+    <engine name="android" spec="~6.3.0" />
 </widget>
